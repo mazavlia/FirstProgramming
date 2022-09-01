@@ -1,0 +1,15 @@
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\obj\Debug\net6.0\Sem1Task5.csproj.AssemblyReference.cache
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\obj\Debug\net6.0\Sem1Task5.GeneratedMSBuildEditorConfig.editorconfig
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\obj\Debug\net6.0\Sem1Task5.AssemblyInfoInputs.cache
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\obj\Debug\net6.0\Sem1Task5.AssemblyInfo.cs
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\obj\Debug\net6.0\Sem1Task5.csproj.CoreCompileInputs.cache
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\bin\Debug\net6.0\Sem1Task5.exe
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\bin\Debug\net6.0\Sem1Task5.deps.json
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\bin\Debug\net6.0\Sem1Task5.runtimeconfig.json
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\bin\Debug\net6.0\Sem1Task5.dll
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\bin\Debug\net6.0\Sem1Task5.pdb
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\obj\Debug\net6.0\Sem1Task5.dll
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\obj\Debug\net6.0\refint\Sem1Task5.dll
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\obj\Debug\net6.0\Sem1Task5.pdb
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\obj\Debug\net6.0\Sem1Task5.genruntimeconfig.cache
+E:\Seminars_C_Sharp\01_Seminar\FirstProgramming\Sem1Task5\obj\Debug\net6.0\ref\Sem1Task5.dll
