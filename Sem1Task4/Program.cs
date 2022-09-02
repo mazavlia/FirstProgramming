@@ -4,15 +4,15 @@
 //===========================================================================
 
 
-//Вводим 3 числа
+// Вводим 3 числа
 string? inputLineA = Console.ReadLine();
 string? inputLineB = Console.ReadLine();
 string? inputLineC = Console.ReadLine();
 
-//Проверяем, что эти числа не "пустые"
+// Проверяем, что эти числа не "пустые"
 if (inputLineA != null && inputLineB != null && inputLineC != null)
 {
-    //Присваиваем "целое" число (integer)
+    //Присваиваем введенному значению "целое" число (integer)
     int inputNumberA = int.Parse(inputLineA);
     int inputNumberB = int.Parse(inputLineB);
     int inputNumberC = int.Parse(inputLineC);

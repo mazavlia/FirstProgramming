@@ -3,15 +3,20 @@
 // какое число большее, а какое меньшее.
 //===========================================================================
 
+// Вводим 2 числа.
 string? inputLineA = Console.ReadLine();
 string? inputLineB = Console.ReadLine();
 
+// Проверяем, что эти числа не "пустые".
 if (inputLineA != null && inputLineB != null)
 {
+    // Присваиваем введенному значению "целое" число (integer).
     int inputA = int.Parse(inputLineA);
     int inputB = int.Parse(inputLineB);
     
-    if (inputA == inputB)
+    // Сравниваем числа между собой.
+
+        if (inputA == inputB)
     {
         Console.WriteLine("Числа между собой равны");
     }
