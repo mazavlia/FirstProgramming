@@ -17,7 +17,7 @@ void MyVariant()
 
 void MyVariant2()
 {
-    Console.WriteLine("MyVariant2: ");
+Console.WriteLine("MyVariant2: ");
 System.Random numberGenerator = new System.Random();
 int number = numberGenerator.Next(100, 1000);
 Console.WriteLine(number);
