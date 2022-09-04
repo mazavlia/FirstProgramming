@@ -16,10 +16,10 @@ if (inputLine != null)
         char[] charArray = inputNumber.ToString().ToCharArray();
         Console.WriteLine("Вторая цифра введенного Вами числа: "+ charArray[1]);
     }
-   
     else 
     {
         Console.WriteLine("Вы ввели не трехзначное число, попробуйте еще раз.");
     }
 }
 }
+Method1();
