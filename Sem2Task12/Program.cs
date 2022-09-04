@@ -6,14 +6,15 @@
 
 void MyVersion()
 {
-Console.WriteLine("Введите 2 числа");
+Console.WriteLine("Введите первое число: ");
 string? inputLineA = Console.ReadLine();
+Console.WriteLine("Введите второе число: ");
 string? inputLineB = Console.ReadLine();
 if (inputLineA != null && inputLineB != null)
 {
     int inputNumberA = int.Parse(inputLineA);
     int inputNumberB = int.Parse(inputLineB);
-    if (inputNumberA % inputNumberB == 0)
+    if (inputNumberB % inputNumberA == 0)
     {
         Console.WriteLine("Второе число кратно первому");
     }
@@ -23,3 +24,21 @@ if (inputLineA != null && inputLineB != null)
     }
 }
 }
+
+void VersionEugeny()
+{
+Console.WriteLine("Введите первое число: ");
+string? inputLineA = Console.ReadLine();
+Console.WriteLine("Введите второе число: ");
+string? inputLineB = Console.ReadLine();
+if (inputLineA != null && inputLineB != null)
+{
+    int inputNumberA = int.Parse(inputLineA);
+    int inputNumberB = int.Parse(inputLineB);
+    Console.WriteLine((inputNumberB % inputNumberA == 0) ? ("Второе число кратно первому") : ("Второе число не кратно первому, остаток от деления " + inputNumberB % inputNumberA));
+   
+}
+}
+
+MyVersion();
+VersionEugeny();

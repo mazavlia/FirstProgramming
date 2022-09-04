@@ -22,4 +22,5 @@ if (inputLine != null)
     }
 }
 }
+
 Method1();
