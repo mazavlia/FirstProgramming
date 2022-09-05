@@ -3,7 +3,7 @@
 // сообщает, что третьей цифры нет.
 //===========================================================================
 
-void Method1()
+void Method()
 {
 Console.WriteLine("Введите любое число: ");
 string? inputLine = Console.ReadLine();
@@ -23,4 +23,4 @@ if (inputLine != null)
 }
 }
 
-Method1();
+Method();

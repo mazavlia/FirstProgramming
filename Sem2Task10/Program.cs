@@ -3,7 +3,7 @@
 // и на выходе показывает вторую цифру этого числа.
 //===========================================================================
 
-void Method1()
+void MyMethod()
 {
 Console.WriteLine("Введите любое трехзначное число: ");
 string? inputLine = Console.ReadLine();
@@ -18,9 +18,9 @@ if (inputLine != null)
     }
     else 
     {
-        Console.WriteLine("Вы ввели не трехзначное число, попробуйте еще раз.");
+        Console.WriteLine("Вы ввели не трехзначное число.");
     }
 }
 }
 
-Method1();
+MyMethod();
