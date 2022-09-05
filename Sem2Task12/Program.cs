@@ -40,5 +40,48 @@ if (inputLineA != null && inputLineB != null)
 }
 }
 
-MyVersion();
-VersionEugeny();
+
+
+int inputNumberA = 0;
+int inputNumberB = 0;
+bool result = false;
+
+// Получаем 2 числа от пользователя.
+void ReadData()
+{
+Console.WriteLine("Введите первое число: ");
+string? inputLineA = Console.ReadLine();
+Console.WriteLine("Введите второе число: ");
+string? inputLineB = Console.ReadLine();
+
+inputNumberA = int.Parse(inputLineA);
+inputNumberB = int.Parse(inputLineB);
+
+}
+
+// Определяем кратность чисел.
+void CalculateData()
+{
+result = (inputNumberB % inputNumberA == 0);
+}
+
+// Выводим данные вычисления.
+void PrintData()
+{
+if(result)
+{
+    Console.WriteLine("Второе число кратно первому.");
+}
+else 
+{
+    Console.WriteLine("Второе число не кратно первому, остаток от деления " + inputNumberB % inputNumberA);
+}
+
+}
+
+ReadData();
+CalculateData();
+PrintData();
+
+// MyVersion();
+// VersionEugeny();
