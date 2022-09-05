@@ -14,7 +14,7 @@ void ReadData()
     inputNumber = int.Parse(inputLine);
 }
 
-// Определяем диапазон чисел.
+// Определяем диапазон числа.
 void CalculateData()
 {
     result = (inputNumber > 99 && inputNumber < 1000);
