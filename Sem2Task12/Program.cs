@@ -54,8 +54,8 @@ string? inputLineA = Console.ReadLine();
 Console.WriteLine("Введите второе число: ");
 string? inputLineB = Console.ReadLine();
 
-inputNumberA = int.Parse(inputLineA);
-inputNumberB = int.Parse(inputLineB);
+inputNumberA = int.Parse((inputLineA)??"");
+inputNumberB = int.Parse((inputLineB)??"");
 
 }
 
