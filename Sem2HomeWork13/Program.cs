@@ -10,7 +10,7 @@ bool result = false;
 void ReadData()
 {
     Console.WriteLine("Введите любое трехзначное число: ");
-    string? inputLine = Console.ReadLine();
+    string? inputLine = Console.ReadLine()??"";
     inputNumber = int.Parse(inputLine);
 }
 
