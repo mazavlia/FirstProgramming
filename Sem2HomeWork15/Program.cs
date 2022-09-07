@@ -5,13 +5,13 @@
 
 int inputDayOfWeek = 0;
 string outDayOfWeek = string.Empty;
-bool result = false;
+// bool result = false;
 
 // Получаем число от пользователя.
 void ReadData()
 {
     Console.WriteLine("Введите цифру, обозначающую день недели: ");
-    string? inputLine = Console.ReadLine();
+    string? inputLine = Console.ReadLine()??"";
     inputDayOfWeek = int.Parse(inputLine);
 }
 
@@ -45,7 +45,7 @@ void ShortResult()
 {
     Console.WriteLine("Введите цифру, обозначающую день недели: ");
     string? inputLine = Console.ReadLine();
-    int inputDayOfWeek = int.Parse(inputLine);
+    int inputDayOfWeek = int.Parse((inputLine)??"");
 
     if (inputDayOfWeek > 0 && inputDayOfWeek < 8)
     {
