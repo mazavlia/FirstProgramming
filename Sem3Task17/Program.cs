@@ -14,7 +14,7 @@ int ReadData(string line)
 }
 
 // Метод, который возвращает номер четверти.
-int QuoterTest(int x, int y)
+int QuarterTest(int x, int y)
 {
     if (x > 0 && y > 0)
         return 1;
@@ -37,6 +37,6 @@ void PrintResult(string line)
 int x = ReadData("Введите координату X: ");
 int y = ReadData("Введите координату Y: ");
 
-int res = QuoterTest(x, y);
+int res = QuarterTest(x, y);
 PrintResult("Точка находится в четверти № " + res);
 
