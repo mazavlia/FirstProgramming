@@ -9,7 +9,7 @@ bool result = false;
 void ReadData()
 {
     Console.WriteLine("Введите 5-значное число - палиндром: ");
-    string? inputLine = Console.ReadLine()??"";
+    string? inputLine = Console.ReadLine() ?? "";
     inputNumber = int.Parse(inputLine);
 }
 
@@ -25,15 +25,11 @@ void PrintData()
     if (result)
     {
         char[] charArray = inputNumber.ToString().ToCharArray();
-        if ((charArray[0] == charArray[4]) && (charArray[1] == charArray[3]))
-        {
-            Console.WriteLine("Вы ввели 5-значное число-палиндром.");
-        }  
-        else 
-        {
-            Console.WriteLine("Введенное Вами 5-ти значное число не палиндром.");
-        }
-        
+        Console.WriteLine(
+            ((charArray[0] == charArray[4]) && (charArray[1] == charArray[3]))
+                ? ("Вы ввели 5-значное число-палиндром.")
+                : ("Введенное Вами 5-ти значное число не палиндром.")
+        );
     }
     else
     {
