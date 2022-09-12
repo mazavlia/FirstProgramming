@@ -4,8 +4,6 @@
 
 int inputNumber = 0;
 
-// Получаем число от пользователя.
-
 Console.WriteLine("Введите любое число, а мы проверим, является ли оно палиндромом: ");
 string? inputLine = Console.ReadLine() ?? "";
 inputNumber = int.Parse(inputLine);
