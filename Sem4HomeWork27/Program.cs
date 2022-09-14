@@ -8,7 +8,7 @@
 // * Сделать оценку времени алгоритма через вещественные числа и строки
 //===============================================================================
 
-
+// Метод получения данных от пользователя
 int ReadData(string line)
 {
     // Выводим сообщение.
@@ -41,6 +41,7 @@ void PrintResult(string line)
 int num = ReadData("Введите число: ");
 int res = SumDigit(num);
 PrintResult("Сумма цифр в числе: " + res);
+// Расчет времени
 DateTime d = DateTime.Now;
 Console.WriteLine(DateTime.Now - d);
 
