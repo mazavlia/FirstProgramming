@@ -65,7 +65,6 @@ int startBorder = ReadData("Введите нижнюю границу запо�
 int stopBorder = ReadData("Введите верхнюю границу заполнения массива: ");
 
 int[] inputArray = GenArray(arrLength, startBorder, stopBorder);
-//int[] arr = GenArray(inputArray);
 Print1DArray(inputArray);
 
 int sum = UnevenSumPosition(inputArray);
