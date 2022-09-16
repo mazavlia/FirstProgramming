@@ -46,7 +46,6 @@ double[] GenArray(int arrayLength, double start, double stop)
 // Находим разницу между минимальным и максимальным значением массива
 double MinMax(double[] arr)
 {
-    //double sum = 0;
     double max = double.MinValue;
     double min = double.MaxValue;
     for (int i = 0; i < arr.Length; i++)
@@ -82,10 +81,6 @@ double stopBorder = ReadDataDouble("Введите верхнюю границу
 
 double[] inputArray = GenArray(arrLength, startBorder, stopBorder);
 Print1DArray(inputArray);
-
-// double diff = MinMax(result);
-// PrintResult("Разница между максимальным и минимальным элементами массива: " + diff);
-//PrintResult(MinMax(arr));
 
 double diff = MinMax(inputArray);
 PrintResult("Разница между минимальным и максимальным элементом массива: " + diff);
