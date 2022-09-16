@@ -6,6 +6,7 @@
 // * Отсортировать массив методом пузырька
 //=================================================================================
 
+// Метод ввода данных
 int ReadData(string line)
 {
     // Выводим сообщение
@@ -29,7 +30,7 @@ int[] GenArray(int arrLength)
     return array;
 }
 
-// печатаем массив
+// Печатаем массив
 void PrintArray(int[] arr)
 {
     Console.Write("[" + arr[0] + ", ");
@@ -39,6 +40,22 @@ void PrintArray(int[] arr)
     }
     Console.Write(arr[arr.Length - 1] + "]");
     Console.WriteLine();
+}
+
+// Сортировка случайного массива методом пузырька
+int[] BubbleSort(int[] inArray)
+{
+        for (int i = 0; i < inArray.Length; i++)
+        for (int j = 0; j < inArray.Length - i - 1; j++)
+        {
+            if (inArray[j] > inArray[j + 1])
+            {
+                int temp = inArray[j];
+                inArray[j] = inArray[j + 1];
+                inArray[j + 1] = temp;
+            }
+        }     
+        return inArray;  
 }
 
 //Подсчитываем количество четных элементов массива
@@ -70,7 +87,7 @@ void PrintResult(string line)
 
 int arrLength = ReadData("Введите длину массива: ");
 
-int[] arr = GenArray(arrLength);
+int[] arr = BubbleSort(GenArray(arrLength));
 PrintArray(arr);
 
 int sum = EvenCount(arr);
