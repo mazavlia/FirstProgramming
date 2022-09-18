@@ -108,6 +108,26 @@ int[] methodOfCalculation(int[] sortedArray)
 return sortedArray;
 }
 
+// // сортировка подсчётом (от преподавателя)
+// int[] countingSort(int[] arr, int min, int max)
+// {
+// int[] count = new int[max - min + 1];
+// int z = 0;
+// for (int i = 0; i < arr.Length; i++)
+// {
+// count[arr[i] - min]++;
+// }
+// for (int i = min; i <= max; i++)
+// {
+// while (count[i - min]-- > 0)
+// {
+// arr[z] = i;
+// z++;
+// }
+// }
+// return count;
+// }
+
 
 
 int arrLength = ReadData("Введите длину массива: ");
@@ -138,8 +158,11 @@ PrintResult("Разница между max и min элементами масс�
 DateTime d3 = DateTime.Now;
 Console.WriteLine(DateTime.Now - d3);
 
-
-
-
-
+// //Метод подсчета от преподавателя
+// int[] countSort = countingSort(inputArray, startBorder, stopBorder);
+// Print1DArray(countSort);
+// int res4 = countSort[countSort.Length-1]-countSort[0];
+// PrintResult("Разница между max и min элементами массива методом подсчета: " + "\t" + "\t" + res4);
+// DateTime d4 = DateTime.Now;
+// Console.WriteLine(DateTime.Now - d4);
 
