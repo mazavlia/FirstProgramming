@@ -35,7 +35,4 @@ int Count(int m)
     return res;
 }
 
-// PrintResult("Количество положительных чисел: ", Count(ReadData("Введите количество чисел: ")));
-
-
 PrintResult("Количество положительных чисел: ", Count(ReadData("Введите количество чисел: ")).ToString());
