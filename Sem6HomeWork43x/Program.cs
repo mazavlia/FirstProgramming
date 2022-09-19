@@ -1,0 +1,99 @@
+﻿//===================================================================================
+// №43 Напишите программу, которая найдёт точку пересечения двух прямых, заданных
+// уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются
+// пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; 0,5)
+// * Найдите площадь треугольника, образованного пересечением 3 прямых
+//===================================================================================
+
+// Метод считывания данных пользователя
+double ReadData(string line)
+{
+    // Выводим сообщение
+    Console.Write(line);
+    // Считываем число
+    double number = double.Parse(Console.ReadLine() ?? "0");
+    // Возвращаем значение
+    return number;
+}
+
+// Метод, принимает строку, выводит в консоль
+void PrintResult(string prefix, string line)
+{
+    Console.WriteLine(prefix + line);
+}
+
+double[] FindPointA(double b1, double b2, double k1, double k2)
+{
+    double[] outtArrA = new double[2];
+    double x1 = (b2 - b1) / (k1 - k2);
+    double y1 = k1 * x1 + b1;
+    outtArrA[0] = x1;
+    outtArrA[1] = y1;
+    return outtArrA;
+}
+
+double[] FindPointB(double b2, double b3, double k2, double k3)
+{
+    double[] outtArrB = new double[2];
+    double x2 = (b3 - b2) / (k2 - k3);
+    double y2 = k2 * x2 + b2;
+    outtArrB[0] = x2;
+    outtArrB[1] = y2;
+    return outtArrB;
+}
+
+double[] FindPointC(double b3, double b1, double k3, double k1)
+{
+    double[] outtArrC = new double[2];
+    double x3 = (b1 - b3) / (k3 - k1);
+    double y3 = k3 * x3 + b3;
+    outtArrC[0] = x3;
+    outtArrC[1] = y3;
+    return outtArrC;
+}
+
+//Вводим значения
+double b1 = ReadData("Введите значение b1: ");
+double b2 = ReadData("Введите значение b2: ");
+double b3 = ReadData("Введите значение b3: ");
+double k1 = ReadData("Введите значение k1: ");
+double k2 = ReadData("Введите значение k2: ");
+double k3 = ReadData("Введите значение k3: ");
+
+
+// Находим координаты точки А
+double[] pointA = FindPointA(b1, b2, k1, k2);
+PrintResult("Координаты точки А: ", $"({pointA[0]};{pointA[1]})");
+
+// Находим координаты точки В
+double[] pointB = FindPointB(b2, b3, k2, k3);
+PrintResult("Координаты точки B: ", $"({pointB[0]};{pointB[1]})");
+
+// Находим координаты точки С
+double[] pointC = FindPointC(b3, b1, k3, k1);
+PrintResult("Координаты точки C: ", $"({pointC[0]};{pointC[1]})");
+
+
+//Печатаем длину отрезка LineA (с округлением Math.Round,2)
+double LineA = Math.Round((Math.Sqrt((Math.Pow((pointB[0] - pointA[0]), 2)) + (Math.Pow((pointB[1] - pointA[1]), 2)))),2);
+PrintResult("Длина отрезка А: ", $"{LineA}");
+
+//Печатаем длину отрезка LineВ
+double LineB = Math.Round((Math.Sqrt((Math.Pow((pointC[0] - pointB[0]), 2)) + (Math.Pow((pointC[1] - pointB[1]), 2)))),2);
+PrintResult("Длина отрезка B: ", $"{LineB}");
+
+//Печатаем длину отрезка LineС
+double LineC = Math.Round((Math.Sqrt((Math.Pow((pointA[0] - pointC[0]), 2)) + (Math.Pow((pointA[1] - pointC[1]), 2)))), 2);
+PrintResult("Длина отрезка C: ", $"{LineC}");
+
+
+// Находим площадь треугольника по формуле Герона:
+//S = √p(p-a)(p-b)(p-c)
+
+if (LineA + LineB>LineC&&LineC + LineB>LineA&&LineA + LineC>LineB)
+{
+    double p = (LineA + LineB + LineC)/2;
+    double STrian = Math.Round(Math.Sqrt(p*(p-LineA)*(p-LineB)*(p-LineC)),2);
+    PrintResult("Площадь треугольника, образованного тремя отрезками (формула Герона), составляет: ", $"{STrian}");
+}
