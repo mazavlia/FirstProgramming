@@ -23,34 +23,14 @@ void PrintResult(string prefix, string line)
     Console.WriteLine(prefix + line);
 }
 
-double[] FindPointA(double b1, double b2, double k1, double k2)
+double[] FindPoint(double b1, double b2, double k1, double k2)
 {
-    double[] outtArrA = new double[2];
+    double[] outtArr = new double[2];
     double x1 = (b2 - b1) / (k1 - k2);
     double y1 = k1 * x1 + b1;
-    outtArrA[0] = x1;
-    outtArrA[1] = y1;
-    return outtArrA;
-}
-
-double[] FindPointB(double b2, double b3, double k2, double k3)
-{
-    double[] outtArrB = new double[2];
-    double x2 = (b3 - b2) / (k2 - k3);
-    double y2 = k2 * x2 + b2;
-    outtArrB[0] = x2;
-    outtArrB[1] = y2;
-    return outtArrB;
-}
-
-double[] FindPointC(double b3, double b1, double k3, double k1)
-{
-    double[] outtArrC = new double[2];
-    double x3 = (b1 - b3) / (k3 - k1);
-    double y3 = k3 * x3 + b3;
-    outtArrC[0] = x3;
-    outtArrC[1] = y3;
-    return outtArrC;
+    outtArr[0] = x1;
+    outtArr[1] = y1;
+    return outtArr;
 }
 
 //Вводим значения
@@ -61,17 +41,16 @@ double k1 = ReadData("Введите значение k1: ");
 double k2 = ReadData("Введите значение k2: ");
 double k3 = ReadData("Введите значение k3: ");
 
-
 // Находим координаты точки А
-double[] pointA = FindPointA(b1, b2, k1, k2);
+double[] pointA = FindPoint(b1, b2, k1, k2);
 PrintResult("Координаты точки А: ", $"({pointA[0]};{pointA[1]})");
 
 // Находим координаты точки В
-double[] pointB = FindPointB(b2, b3, k2, k3);
+double[] pointB = FindPoint(b2, b3, k2, k3);
 PrintResult("Координаты точки B: ", $"({pointB[0]};{pointB[1]})");
 
 // Находим координаты точки С
-double[] pointC = FindPointC(b3, b1, k3, k1);
+double[] pointC = FindPoint(b3, b1, k3, k1);
 PrintResult("Координаты точки C: ", $"({pointC[0]};{pointC[1]})");
 
 
