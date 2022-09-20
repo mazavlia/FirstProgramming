@@ -26,10 +26,10 @@ void PrintResult(string prefix, string line)
 double[] FindPoint(double b1, double b2, double k1, double k2)
 {
     double[] outtArr = new double[2];
-    double x1 = (b2 - b1) / (k1 - k2);
-    double y1 = k1 * x1 + b1;
-    outtArr[0] = x1;
-    outtArr[1] = y1;
+    double x = (b2 - b1) / (k1 - k2);
+    double y = k1 * x + b1;
+    outtArr[0] = x;
+    outtArr[1] = y;
     return outtArr;
 }
 
