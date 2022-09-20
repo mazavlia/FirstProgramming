@@ -89,11 +89,16 @@ PrintResult("Длина отрезка C: ", $"{LineC}");
 
 
 // Находим площадь треугольника по формуле Герона:
-//S = √p(p-a)(p-b)(p-c)
+//S = √p(p-a)(p-b)(p-c) - формула площади треугольника, 
+// где p - полупериметр, p=(a+b+c)/2
 
-if (LineA + LineB>LineC&&LineC + LineB>LineA&&LineA + LineC>LineB)
+if (LineA + LineB > LineC && LineC + LineB > LineA && LineA + LineC > LineB)
 {
     double p = (LineA + LineB + LineC)/2;
     double STrian = Math.Round(Math.Sqrt(p*(p-LineA)*(p-LineB)*(p-LineC)),2);
     PrintResult("Площадь треугольника, образованного тремя отрезками (формула Герона), составляет: ", $"{STrian}");
+}
+else 
+{
+    Console.WriteLine("Из текущих данных нельзя построить треугольник: линии параллельны или координаты точек имеют одинаковые значения.");
 }
