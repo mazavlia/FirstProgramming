@@ -14,11 +14,11 @@ int ReadData(string text)
     return number;
 }
 
-// Вывод результата в консоль
-void PrintResult(string data)
-{
-    Console.WriteLine(data);
-}
+// // Вывод результата в консоль
+// void PrintResult(string data)
+// {
+//     Console.WriteLine(data);
+// }
 
 // Универсальный метод генерации и заполнения двумерного массива.
 int[,] Gen2DArray(int countRow, int countColumn, int start, int stop)
