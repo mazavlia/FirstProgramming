@@ -5,7 +5,7 @@
 // 8 7,8 -7,1 9
 // * При выводе матрицы показывать каждую цифру разного цвета(цветов всего 16)
 
-// Метод ввода целых чисел
+// Метод ввода целых чисел.
 int ReadData(string line)
 {
     // Выводим сообщение
@@ -32,27 +32,15 @@ double[,] Gen2DArray(int countRow, int countColumn, double start, double stop)
     return array2D;
 }
 
-ConsoleColor[] col = new ConsoleColor[]
-{
-    ConsoleColor.Black,
-    ConsoleColor.Blue,
-    ConsoleColor.Cyan,
-    ConsoleColor.DarkBlue,
-    ConsoleColor.DarkCyan,
-    ConsoleColor.DarkGray,
-    ConsoleColor.DarkGreen,
-    ConsoleColor.DarkMagenta,
-    ConsoleColor.DarkRed,
-    ConsoleColor.DarkYellow,
-    ConsoleColor.Gray,
-    ConsoleColor.Green,
-    ConsoleColor.Magenta,
-    ConsoleColor.Red,
-    ConsoleColor.White,
-    ConsoleColor.Yellow
-};
-
-// Печать двумерного массива разным цветом посимвольно
+// Массив с описанием всех 16 цветов.
+ConsoleColor[] col = new ConsoleColor[]{ConsoleColor.Black,ConsoleColor.Blue,ConsoleColor.Cyan,
+                                        ConsoleColor.DarkBlue,ConsoleColor.DarkCyan,ConsoleColor.DarkGray,
+                                        ConsoleColor.DarkGreen,ConsoleColor.DarkMagenta,ConsoleColor.DarkRed,
+                                        ConsoleColor.DarkYellow,ConsoleColor.Gray,ConsoleColor.Green,
+                                        ConsoleColor.Magenta,ConsoleColor.Red,ConsoleColor.White,
+                                        ConsoleColor.Yellow};
+                                        
+// Описание метода печати двумерного массива разным цветом посимвольно.
 string PrintStringColored(string args)
 {       
     foreach (char item in args)
@@ -64,7 +52,7 @@ string PrintStringColored(string args)
     return args;
 }
 
-// Печать двумерного массива монохром.
+// Печать двумерного массива посимвольно разными цветами.
 double[,] Print2DArray(double[,] matr)
 {
     for (int m = 0; m < matr.GetLength(0); m++)
@@ -78,6 +66,7 @@ double[,] Print2DArray(double[,] matr)
     return matr;
 }
 
+// Описание программы.
 int row = ReadData("Введите количество строк: ");
 int column = ReadData("Введите количество столбцов: ");
 
@@ -85,6 +74,3 @@ double[,] arr2D = Gen2DArray(row, column, 0, 99);
 
 Console.WriteLine("Разноцветный массив с изменением цвета посимвольно: ");
 Print2DArray(arr2D);
-
-
-
