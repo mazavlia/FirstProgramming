@@ -9,6 +9,20 @@
 // * Заполнить числами Фиббоначи и выделить цветом найденную цифру
 //===========================================================================================
 
+int row = ReadData("Введите количество строк: ");
+int column = ReadData("Введите количество столбцов: ");
+
+int[,] arr2D = Gen2DArray(row, column, 10, 99);
+Console.WriteLine("Сгенерированный массив: ");
+Print2DArray(arr2D);
+
+// Искомое значение по диагонали и вертикали "-1", так как нумерация начинается с 0.
+int x = (ReadData("Введите искомое значение по диагонали: ")-1);
+int y = (ReadData("Введите искомое значение по вертикали: ")-1);
+
+int findElem = FindElement(arr2D);
+PrintResult("Значение искомого элемента: ", findElem);
+
 // Получение данных от пользователя и преобразование в число
 int ReadData(string text)
 {
@@ -16,9 +30,6 @@ int ReadData(string text)
     int number = int.Parse(Console.ReadLine() ?? "0");
     return number;
 }
-
-int row = ReadData("Введите количество строк: ");
-int column = ReadData("Введите количество столбцов: ");
 
 // Универсальный метод генерации и заполнения двумерного массива.
 int[,] Gen2DArray(int countRow, int countColumn, int start, int stop)
@@ -50,13 +61,6 @@ int[,] Print2DArray(int[,] matr)
     return matr;
 }
 
-int[,] arr2D = Gen2DArray(row, column, 10, 99);
-Console.WriteLine("Сгенерированный массив: ");
-Print2DArray(arr2D);
-
-int x = ReadData("Введите искомое значение по диагонали: ");
-int y = ReadData("Введите искомое значение по вертикали: ");
-
 // Поиск элемента в массиве.
 int FindElement(int[,] array2D)
 {
@@ -80,10 +84,3 @@ void PrintResult(string prefix, int data)
         Console.WriteLine(prefix + data);
     }
 }
-
-int findElem = FindElement(arr2D);
-PrintResult("Значение искомого элемента: ", findElem);
-
-
-// int sumDiag = SumDiagonale(arr2D);
-// PrintResult("Сумма элементов массива, расположенных на главной диагонали: ", sumDiag);
