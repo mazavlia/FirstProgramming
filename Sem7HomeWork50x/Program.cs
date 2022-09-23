@@ -33,13 +33,13 @@ int ReadData(string text)
 }
 
 // Заполняем массив числами Фибоначи
-double[,] Gen2DArray(double[,] arr2D)
+double[,] Gen2DArray(double[,] matr)
 {
-    for (int i = 0; i < row; i++)
+    for (int i = 0; i < matr.GetLength(0); i++)
     {
-        for (int j = 0; j < column; j++)
+        for (int j = 0; j < matr.GetLength(1); j++)
         {
-            arr2D[i, j] = Fibonacci(i*row+j); 
+            arr2D[i, j] = Fibonacci(i*matr.GetLength(1)+j); 
         }
     }
     return arr2D;
